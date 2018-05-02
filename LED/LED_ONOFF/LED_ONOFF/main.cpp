@@ -20,6 +20,7 @@ int main(void)
 		PORTD=0x00;
 		_delay_ms(500);
 		
+<<<<<<< HEAD
 		for(int i=0;i<8;i++)
 		{
 			PORTD=~(1<<i);
@@ -29,6 +30,17 @@ int main(void)
 		{
 			PORTD=~(0b10000000>>i);
 			_delay_ms(100);
+=======
+		for(int i=0;i<8;i+=2)
+		{
+			PORTD=~(1<<i);
+			_delay_ms(300);
+		}
+		for(int i=0;i<8;i+=2)
+		{
+			PORTD=~(0b10000000>>i);
+			_delay_ms(300);
+>>>>>>> 인도향
 		}
     }
 }
